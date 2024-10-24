@@ -22,5 +22,4 @@ public class Paciente {
     @OneToMany(mappedBy = "paciente")
     private List<HistoricoPaciente> historicoPacientes;
 
-    // Getters e Setters
 }
