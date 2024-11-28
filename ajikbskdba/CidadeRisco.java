@@ -19,6 +19,13 @@ public class CidadeRisco {
     @JoinColumn(name = "id_risco")
     private Risco risco;
 
+    public CidadeRisco(CidadeRiscoId id, String tipo_de_risco, Cidade cidade, Risco risco) {
+        this.id = id;
+        this.tipo_de_risco = tipo_de_risco;
+        this.cidade = cidade;
+        this.risco = risco;
+    }
+
     public CidadeRiscoId getId() {
         return id;
     }
@@ -50,6 +57,4 @@ public class CidadeRisco {
     public void setRisco(Risco risco) {
         this.risco = risco;
     }
-
-    
 }

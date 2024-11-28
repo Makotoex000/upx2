@@ -14,6 +14,12 @@ public class Estado {
     @OneToMany(mappedBy = "estado")
     private List<Cidade> cidades;
 
+    public Estado(String id_estado, String nome_estado, List<Cidade> cidades) {
+        this.id_estado = Integer.parseInt(id_estado);
+        this.nome_estado = nome_estado;
+        this.cidades = cidades;
+    }
+
     public int getId_estado() {
         return id_estado;
     }
@@ -37,12 +43,4 @@ public class Estado {
     public void setCidades(List<Cidade> cidades) {
         this.cidades = cidades;
     }
-
-    
-
-    
-
-
-
-
 }

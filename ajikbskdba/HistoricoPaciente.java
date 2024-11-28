@@ -23,6 +23,14 @@ public class HistoricoPaciente {
     @JoinColumn(name = "id_paciente", nullable = false)
     private Paciente paciente;
 
+    public HistoricoPaciente(String id_paciente_paciente, Date data_antendimento, Alocacao alocacao, Profissional profissional, Paciente paciente) {
+        this.id_paciente_paciente = Integer.parseInt(id_paciente_paciente);
+        this.data_antendimento = data_antendimento;
+        this.alocacao = alocacao;
+        this.profissional = profissional;
+        this.paciente = paciente;
+    }
+
     public int getId_paciente_paciente() {
         return id_paciente_paciente;
     }
@@ -62,6 +70,4 @@ public class HistoricoPaciente {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
-
-    
 }

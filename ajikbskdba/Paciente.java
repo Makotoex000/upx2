@@ -14,12 +14,4 @@ public class Paciente {
     @JoinColumn(name = "id_risco", nullable = false)
     private Risco risco;
 
-    private String telefone;
-    private String email;
-    private Date data_nascimento;
-    private String nome;
-
-    @OneToMany(mappedBy = "paciente")
-    private List<HistoricoPaciente> historicoPacientes;
-
-}
+    private

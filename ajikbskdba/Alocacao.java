@@ -15,6 +15,12 @@ public class Alocacao {
 
     private Date data_alocacao;
 
+    public Alocacao(String id_alocacao, Risco risco, Date data_alocacao) {
+        this.id_alocacao = Integer.parseInt(id_alocacao);
+        this.risco = risco;
+        this.data_alocacao = data_alocacao;
+    }
+
     public int getId_alocacao() {
         return id_alocacao;
     }
@@ -38,8 +44,4 @@ public class Alocacao {
     public void setData_alocacao(Date data_alocacao) {
         this.data_alocacao = data_alocacao;
     }
-
-    
-
-   
 }

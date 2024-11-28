@@ -18,6 +18,13 @@ public class Cidade {
     @OneToMany(mappedBy = "cidade")
     private List<CidadeRisco> cidadeRiscos;
 
+    public Cidade(String id_cidade, String nome_cidade, Estado estado, List<CidadeRisco> cidadeRiscos) {
+        this.id_cidade = Integer.parseInt(id_cidade);
+        this.nome_cidade = nome_cidade;
+        this.estado = estado;
+        this.cidadeRiscos = cidadeRiscos;
+    }
+
     public int getId_cidade() {
         return id_cidade;
     }
@@ -49,6 +56,4 @@ public class Cidade {
     public void setCidadeRiscos(List<CidadeRisco> cidadeRiscos) {
         this.cidadeRiscos = cidadeRiscos;
     }
-
-    
 }
